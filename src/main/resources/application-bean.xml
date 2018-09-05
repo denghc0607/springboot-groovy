@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="compilerConfiguration" class="org.codehaus.groovy.control.CompilerConfiguration">
+        <property name="scriptBaseClass" value="com.denghc.springboot.groovy.script.VerifyScript"/>
+    </bean>
+    <bean id="groovyShell2" class="com.denghc.springboot.groovy.engine.GroovyShell2">
+        <constructor-arg ref="compilerConfiguration"/>
+    </bean>
+</beans>
